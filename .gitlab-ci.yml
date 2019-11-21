@@ -1,0 +1,11 @@
+image: node:alpine
+
+deploy_production:
+  stage: deploy
+  environment: Production
+  only:
+    - master
+  script:
+    - npm install
+    - npm i -g firebase-tools
+    - firebase deploy --non-interactive --token "1//01hNp1aU_gzdkCgYIARAAGAESNwF-L9Ir5bjGyD7ZmpL5nMc9cUv2A3RdvcjvQkaIEyaD5vxz2PqehboxSW84czN4DIGK0HpD9YY" --project school-d0254
